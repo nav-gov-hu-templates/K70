@@ -1,0 +1,2588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:meta="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+        xmlns:tns="https://soap.api.nav.gov.hu/definitions/model/2.0/K70/10.0"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        targetNamespace="https://soap.api.nav.gov.hu/definitions/model/2.0/K70/10.0">
+   <import namespace="https://api.nav.gov.hu/definitions/form_xsd_metaschema/1.0"
+           schemaLocation="form_xsd_metaschema.xsd"/>
+   <element name="Doc_K70" type="tns:Doc_K70_Type" meta:metaType="DocMetaType">
+      <annotation>
+         <documentation>A letétkezelő (a program szervező) adatszolgáltatása és bejelentése az (elismert) munkavállalói értékpapír-juttatási program keretében a magánszemély javára egyedi letétként őrzött értékpapírokról, valamint a letétkezelő változásáról</documentation>
+      </annotation>
+   </element>
+   <complexType name="Doc_K70_Type">
+      <annotation>
+         <documentation>A teljes bizonylat szerkezetet leíró típus</documentation>
+      </annotation>
+      <sequence>
+         <element name="Form_K70A"
+                  type="tns:Form_K70A_Type"
+                  minOccurs="1"
+                  maxOccurs="1"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>K70A részbizonylat</documentation>
+            </annotation>
+         </element>
+         <element name="Form_K70M"
+                  type="tns:Form_K70M_Type"
+                  minOccurs="1"
+                  maxOccurs="unbounded"
+                  meta:metaType="FormMetaType">
+            <annotation>
+               <documentation>K70M részbizonylat</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <simpleType name="Enum_K70A_0A0001C008A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="köz">
+            <annotation>
+               <documentation>köz=78</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körút">
+            <annotation>
+               <documentation>körút=75</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tér">
+            <annotation>
+               <documentation>tér=143</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utca">
+            <annotation>
+               <documentation>utca=148</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="út">
+            <annotation>
+               <documentation>út=150</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útja">
+            <annotation>
+               <documentation>útja=151</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna">
+            <annotation>
+               <documentation>akna=2</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-alsó">
+            <annotation>
+               <documentation>akna-alsó=3</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-felső">
+            <annotation>
+               <documentation>akna-felső=4</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alagút">
+            <annotation>
+               <documentation>alagút=5</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alsórakpart">
+            <annotation>
+               <documentation>alsórakpart=6</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="arborétum">
+            <annotation>
+               <documentation>arborétum=7</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autópálya">
+            <annotation>
+               <documentation>autópálya</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autóút">
+            <annotation>
+               <documentation>autóút=8</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állat- és növ.kert">
+            <annotation>
+               <documentation>állat- és növ.kert=9</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állomás">
+            <annotation>
+               <documentation>állomás=10</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árnyék">
+            <annotation>
+               <documentation>árnyék=11</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árok">
+            <annotation>
+               <documentation>árok=12</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="átjáró">
+            <annotation>
+               <documentation>átjáró=13</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barakképület">
+            <annotation>
+               <documentation>barakképület=14</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barlang">
+            <annotation>
+               <documentation>barlang=15</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bánya">
+            <annotation>
+               <documentation>bánya=16</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bányatelep">
+            <annotation>
+               <documentation>bányatelep=17</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástya">
+            <annotation>
+               <documentation>bástya=18</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástyája">
+            <annotation>
+               <documentation>bástyája=19</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bejáró">
+            <annotation>
+               <documentation>bejáró=20</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bekötőút">
+            <annotation>
+               <documentation>bekötőút=21</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csárda">
+            <annotation>
+               <documentation>csárda=22</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csónakházak">
+            <annotation>
+               <documentation>csónakházak=23</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="domb">
+            <annotation>
+               <documentation>domb=24</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlő">
+            <annotation>
+               <documentation>dűlő=25</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlősor">
+            <annotation>
+               <documentation>dűlősor=26</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőterület">
+            <annotation>
+               <documentation>dűlőterület=27</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőút">
+            <annotation>
+               <documentation>dűlőút=28</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyetemváros">
+            <annotation>
+               <documentation>egyetemváros=29</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyéb">
+            <annotation>
+               <documentation>egyéb=30</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="elágazás">
+            <annotation>
+               <documentation>elágazás=31</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="emlékút">
+            <annotation>
+               <documentation>emlékút=32</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészház">
+            <annotation>
+               <documentation>erdészház=33</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészlak">
+            <annotation>
+               <documentation>erdészlak=34</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdő">
+            <annotation>
+               <documentation>erdő=35</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdősor">
+            <annotation>
+               <documentation>erdősor=36</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasor">
+            <annotation>
+               <documentation>fasor=37</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasora">
+            <annotation>
+               <documentation>fasora=38</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="felső">
+            <annotation>
+               <documentation>felső=39</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="forduló">
+            <annotation>
+               <documentation>forduló=40</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="föld">
+            <annotation>
+               <documentation>föld=41</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főmérnökség">
+            <annotation>
+               <documentation>főmérnökség=42</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főtér">
+            <annotation>
+               <documentation>főtér=43</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főút">
+            <annotation>
+               <documentation>főút=44</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gát">
+            <annotation>
+               <documentation>gát=45</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátőrház">
+            <annotation>
+               <documentation>gátőrház=46</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátsor">
+            <annotation>
+               <documentation>gátsor=47</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyár">
+            <annotation>
+               <documentation>gyár=48</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyártelep">
+            <annotation>
+               <documentation>gyártelep=49</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyárváros">
+            <annotation>
+               <documentation>gyárváros=50</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyümölcsös">
+            <annotation>
+               <documentation>gyümölcsös=51</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hajóállomás">
+            <annotation>
+               <documentation>hajóállomás</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határsor">
+            <annotation>
+               <documentation>határsor=52</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határút">
+            <annotation>
+               <documentation>határút=53</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ház">
+            <annotation>
+               <documentation>ház=54</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegy">
+            <annotation>
+               <documentation>hegy=55</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhát">
+            <annotation>
+               <documentation>hegyhát=56</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátdűlő">
+            <annotation>
+               <documentation>hegyhátdűlő=57</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátköz">
+            <annotation>
+               <documentation>hegyhátköz=58</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hídfő">
+            <annotation>
+               <documentation>hídfő=59</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hrsz.">
+            <annotation>
+               <documentation>hrsz.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="iskola">
+            <annotation>
+               <documentation>iskola=60</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="jav.alatt">
+            <annotation>
+               <documentation>jav.alatt=61</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="játszótér">
+            <annotation>
+               <documentation>játszótér=62</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kapu">
+            <annotation>
+               <documentation>kapu=63</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kastély">
+            <annotation>
+               <documentation>kastély=64</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kert">
+            <annotation>
+               <documentation>kert=65</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kertsor">
+            <annotation>
+               <documentation>kertsor=66</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kilátó">
+            <annotation>
+               <documentation>kilátó=67</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kioszk">
+            <annotation>
+               <documentation>kioszk=68</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kocsiszín">
+            <annotation>
+               <documentation>kocsiszín=69</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kolónia">
+            <annotation>
+               <documentation>kolónia=70</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="korzó">
+            <annotation>
+               <documentation>korzó=71</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kör">
+            <annotation>
+               <documentation>kör=72</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körönd">
+            <annotation>
+               <documentation>körönd=73</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körtér">
+            <annotation>
+               <documentation>körtér=74</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körvasútsor">
+            <annotation>
+               <documentation>körvasútsor=76</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körzet">
+            <annotation>
+               <documentation>körzet=77</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kultúrpark">
+            <annotation>
+               <documentation>kultúrpark=79</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kunyhó">
+            <annotation>
+               <documentation>kunyhó=80</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kút">
+            <annotation>
+               <documentation>kút=81</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kültelek">
+            <annotation>
+               <documentation>kültelek=82</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="külterület">
+            <annotation>
+               <documentation>külterület</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakóház">
+            <annotation>
+               <documentation>lakóház=83</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakónegyed">
+            <annotation>
+               <documentation>lakónegyed=84</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakótelep">
+            <annotation>
+               <documentation>lakótelep=85</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejáró">
+            <annotation>
+               <documentation>lejáró=86</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejtő">
+            <annotation>
+               <documentation>lejtő=87</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lépcső">
+            <annotation>
+               <documentation>lépcső=88</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="liget">
+            <annotation>
+               <documentation>liget=89</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="major">
+            <annotation>
+               <documentation>major=90</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="malom">
+            <annotation>
+               <documentation>malom=91</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="menedékház">
+            <annotation>
+               <documentation>menedékház=92</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="mélyút">
+            <annotation>
+               <documentation>mélyút=93</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="munkásszálló">
+            <annotation>
+               <documentation>munkásszálló=94</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="műút">
+            <annotation>
+               <documentation>műút=95</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="oldal">
+            <annotation>
+               <documentation>oldal=96</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="orom">
+            <annotation>
+               <documentation>orom=97</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrház">
+            <annotation>
+               <documentation>őrház=98</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházak">
+            <annotation>
+               <documentation>őrházak=99</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházlak">
+            <annotation>
+               <documentation>őrházlak=100</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="park">
+            <annotation>
+               <documentation>park=101</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="parkoló">
+            <annotation>
+               <documentation>parkoló=104</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="parkja">
+            <annotation>
+               <documentation>parkja=102</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="part">
+            <annotation>
+               <documentation>part=103</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pavilon">
+            <annotation>
+               <documentation>pavilon=106</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pálya">
+            <annotation>
+               <documentation>pálya=104</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pályaudvar">
+            <annotation>
+               <documentation>pályaudvar=105</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="piac">
+            <annotation>
+               <documentation>piac=106</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pihenő">
+            <annotation>
+               <documentation>pihenő=107</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pince">
+            <annotation>
+               <documentation>pince=108</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pincesor">
+            <annotation>
+               <documentation>pincesor=109</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="puszta">
+            <annotation>
+               <documentation>puszta=110</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rakpart">
+            <annotation>
+               <documentation>rakpart=111</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="repülőtér">
+            <annotation>
+               <documentation>repülőtér=112</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rész">
+            <annotation>
+               <documentation>rész=113</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rét">
+            <annotation>
+               <documentation>rét=114</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sarok">
+            <annotation>
+               <documentation>sarok=115</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sánc">
+            <annotation>
+               <documentation>sánc=116</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sávház">
+            <annotation>
+               <documentation>sávház=117</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sétány">
+            <annotation>
+               <documentation>sétány=118</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sor">
+            <annotation>
+               <documentation>sor=119</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sora">
+            <annotation>
+               <documentation>sora=120</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sportpálya">
+            <annotation>
+               <documentation>sportpálya=121</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sporttelep">
+            <annotation>
+               <documentation>sporttelep=122</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="stadion">
+            <annotation>
+               <documentation>stadion=123</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="strandfürdő">
+            <annotation>
+               <documentation>strandfürdő=124</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sugárút">
+            <annotation>
+               <documentation>sugárút=125</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállás">
+            <annotation>
+               <documentation>szállás=126</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállások">
+            <annotation>
+               <documentation>szállások=127</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szer">
+            <annotation>
+               <documentation>szer=128</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szél">
+            <annotation>
+               <documentation>szél=129</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sziget">
+            <annotation>
+               <documentation>sziget=130</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szivattyútelep">
+            <annotation>
+               <documentation>szivattyútelep=131</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlő">
+            <annotation>
+               <documentation>szőlő=132</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlőhegy">
+            <annotation>
+               <documentation>szőlőhegy=133</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlők">
+            <annotation>
+               <documentation>szőlők=134</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tag">
+            <annotation>
+               <documentation>tag=135</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanya">
+            <annotation>
+               <documentation>tanya=136</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanyák">
+            <annotation>
+               <documentation>tanyák=137</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="telep">
+            <annotation>
+               <documentation>telep=138</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="temető">
+            <annotation>
+               <documentation>temető=139</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tere">
+            <annotation>
+               <documentation>tere=140</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tető">
+            <annotation>
+               <documentation>tető=141</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="télikikötő">
+            <annotation>
+               <documentation>télikikötő=142</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tömb">
+            <annotation>
+               <documentation>tömb=144</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="turistaház">
+            <annotation>
+               <documentation>turistaház=145</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="udvar">
+            <annotation>
+               <documentation>udvar=146</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utak">
+            <annotation>
+               <documentation>utak=147</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utcája">
+            <annotation>
+               <documentation>utcája=149</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útőrház">
+            <annotation>
+               <documentation>útőrház=152</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő">
+            <annotation>
+               <documentation>üdülő=153</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-part">
+            <annotation>
+               <documentation>üdülő-part=154</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-sor">
+            <annotation>
+               <documentation>üdülő-sor=155</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-telep">
+            <annotation>
+               <documentation>üdülő-telep=156</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadaskert">
+            <annotation>
+               <documentation>vadaskert=157</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadászház">
+            <annotation>
+               <documentation>vadászház=158</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútállomás">
+            <annotation>
+               <documentation>vasútállomás=159</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútimegálló">
+            <annotation>
+               <documentation>vasútimegálló=160</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútiőrház">
+            <annotation>
+               <documentation>vasútiőrház=161</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútsor">
+            <annotation>
+               <documentation>vasútsor=162</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vágóhíd">
+            <annotation>
+               <documentation>vágóhíd=163</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vár">
+            <annotation>
+               <documentation>vár=164</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várkerület">
+            <annotation>
+               <documentation>várkerület</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várköz">
+            <annotation>
+               <documentation>várköz=165</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="város">
+            <annotation>
+               <documentation>város=166</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vezetőút">
+            <annotation>
+               <documentation>vezetőút=167</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="villasor">
+            <annotation>
+               <documentation>villasor=168</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vitorláskikötő">
+            <annotation>
+               <documentation>vitorláskikötő</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vízmű">
+            <annotation>
+               <documentation>vízmű=169</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="völgy">
+            <annotation>
+               <documentation>völgy=170</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zsilip">
+            <annotation>
+               <documentation>zsilip=171</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zug">
+            <annotation>
+               <documentation>zug=172</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_K70A_0A0001C017A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="postafiók">
+            <annotation>
+               <documentation>postafiók</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="köz">
+            <annotation>
+               <documentation>köz=78</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körút">
+            <annotation>
+               <documentation>körút=75</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tér">
+            <annotation>
+               <documentation>tér=143</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utca">
+            <annotation>
+               <documentation>utca=148</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="út">
+            <annotation>
+               <documentation>út=150</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útja">
+            <annotation>
+               <documentation>útja=151</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna">
+            <annotation>
+               <documentation>akna=2</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-alsó">
+            <annotation>
+               <documentation>akna-alsó=3</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="akna-felső">
+            <annotation>
+               <documentation>akna-felső=4</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alagút">
+            <annotation>
+               <documentation>alagút=5</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="alsórakpart">
+            <annotation>
+               <documentation>alsórakpart=6</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="arborétum">
+            <annotation>
+               <documentation>arborétum=7</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autópálya">
+            <annotation>
+               <documentation>autópálya</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="autóút">
+            <annotation>
+               <documentation>autóút=8</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állat- és növ.kert">
+            <annotation>
+               <documentation>állat- és növ.kert=9</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="állomás">
+            <annotation>
+               <documentation>állomás=10</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árnyék">
+            <annotation>
+               <documentation>árnyék=11</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="árok">
+            <annotation>
+               <documentation>árok=12</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="átjáró">
+            <annotation>
+               <documentation>átjáró=13</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barakképület">
+            <annotation>
+               <documentation>barakképület=14</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="barlang">
+            <annotation>
+               <documentation>barlang=15</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bánya">
+            <annotation>
+               <documentation>bánya=16</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bányatelep">
+            <annotation>
+               <documentation>bányatelep=17</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástya">
+            <annotation>
+               <documentation>bástya=18</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bástyája">
+            <annotation>
+               <documentation>bástyája=19</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bejáró">
+            <annotation>
+               <documentation>bejáró=20</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="bekötőút">
+            <annotation>
+               <documentation>bekötőút=21</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csárda">
+            <annotation>
+               <documentation>csárda=22</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="csónakházak">
+            <annotation>
+               <documentation>csónakházak=23</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="domb">
+            <annotation>
+               <documentation>domb=24</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlő">
+            <annotation>
+               <documentation>dűlő=25</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlősor">
+            <annotation>
+               <documentation>dűlősor=26</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőterület">
+            <annotation>
+               <documentation>dűlőterület=27</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="dűlőút">
+            <annotation>
+               <documentation>dűlőút=28</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyetemváros">
+            <annotation>
+               <documentation>egyetemváros=29</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="egyéb">
+            <annotation>
+               <documentation>egyéb=30</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="elágazás">
+            <annotation>
+               <documentation>elágazás=31</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="emlékút">
+            <annotation>
+               <documentation>emlékút=32</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészház">
+            <annotation>
+               <documentation>erdészház=33</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdészlak">
+            <annotation>
+               <documentation>erdészlak=34</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdő">
+            <annotation>
+               <documentation>erdő=35</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="erdősor">
+            <annotation>
+               <documentation>erdősor=36</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasor">
+            <annotation>
+               <documentation>fasor=37</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="fasora">
+            <annotation>
+               <documentation>fasora=38</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="felső">
+            <annotation>
+               <documentation>felső=39</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="forduló">
+            <annotation>
+               <documentation>forduló=40</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="föld">
+            <annotation>
+               <documentation>föld=41</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főmérnökség">
+            <annotation>
+               <documentation>főmérnökség=42</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főtér">
+            <annotation>
+               <documentation>főtér=43</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="főút">
+            <annotation>
+               <documentation>főút=44</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gát">
+            <annotation>
+               <documentation>gát=45</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátőrház">
+            <annotation>
+               <documentation>gátőrház=46</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gátsor">
+            <annotation>
+               <documentation>gátsor=47</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyár">
+            <annotation>
+               <documentation>gyár=48</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyártelep">
+            <annotation>
+               <documentation>gyártelep=49</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyárváros">
+            <annotation>
+               <documentation>gyárváros=50</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="gyümölcsös">
+            <annotation>
+               <documentation>gyümölcsös=51</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hajóállomás">
+            <annotation>
+               <documentation>hajóállomás</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határsor">
+            <annotation>
+               <documentation>határsor=52</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="határút">
+            <annotation>
+               <documentation>határút=53</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="ház">
+            <annotation>
+               <documentation>ház=54</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegy">
+            <annotation>
+               <documentation>hegy=55</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhát">
+            <annotation>
+               <documentation>hegyhát=56</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátdűlő">
+            <annotation>
+               <documentation>hegyhátdűlő=57</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hegyhátköz">
+            <annotation>
+               <documentation>hegyhátköz=58</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hídfő">
+            <annotation>
+               <documentation>hídfő=59</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="hrsz.">
+            <annotation>
+               <documentation>hrsz.</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="iskola">
+            <annotation>
+               <documentation>iskola=60</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="jav.alatt">
+            <annotation>
+               <documentation>jav.alatt=61</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="játszótér">
+            <annotation>
+               <documentation>játszótér=62</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kapu">
+            <annotation>
+               <documentation>kapu=63</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kastély">
+            <annotation>
+               <documentation>kastély=64</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kert">
+            <annotation>
+               <documentation>kert=65</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kertsor">
+            <annotation>
+               <documentation>kertsor=66</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kilátó">
+            <annotation>
+               <documentation>kilátó=67</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kioszk">
+            <annotation>
+               <documentation>kioszk=68</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kocsiszín">
+            <annotation>
+               <documentation>kocsiszín=69</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kolónia">
+            <annotation>
+               <documentation>kolónia=70</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="korzó">
+            <annotation>
+               <documentation>korzó=71</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kör">
+            <annotation>
+               <documentation>kör=72</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körönd">
+            <annotation>
+               <documentation>körönd=73</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körtér">
+            <annotation>
+               <documentation>körtér=74</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körvasútsor">
+            <annotation>
+               <documentation>körvasútsor=76</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="körzet">
+            <annotation>
+               <documentation>körzet=77</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kultúrpark">
+            <annotation>
+               <documentation>kultúrpark=79</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kunyhó">
+            <annotation>
+               <documentation>kunyhó=80</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kút">
+            <annotation>
+               <documentation>kút=81</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="kültelek">
+            <annotation>
+               <documentation>kültelek=82</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="külterület">
+            <annotation>
+               <documentation>külterület</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakóház">
+            <annotation>
+               <documentation>lakóház=83</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakónegyed">
+            <annotation>
+               <documentation>lakónegyed=84</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lakótelep">
+            <annotation>
+               <documentation>lakótelep=85</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejáró">
+            <annotation>
+               <documentation>lejáró=86</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lejtő">
+            <annotation>
+               <documentation>lejtő=87</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="lépcső">
+            <annotation>
+               <documentation>lépcső=88</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="liget">
+            <annotation>
+               <documentation>liget=89</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="major">
+            <annotation>
+               <documentation>major=90</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="malom">
+            <annotation>
+               <documentation>malom=91</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="menedékház">
+            <annotation>
+               <documentation>menedékház=92</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="mélyút">
+            <annotation>
+               <documentation>mélyút=93</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="munkásszálló">
+            <annotation>
+               <documentation>munkásszálló=94</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="műút">
+            <annotation>
+               <documentation>műút=95</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="oldal">
+            <annotation>
+               <documentation>oldal=96</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="orom">
+            <annotation>
+               <documentation>orom=97</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrház">
+            <annotation>
+               <documentation>őrház=98</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházak">
+            <annotation>
+               <documentation>őrházak=99</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="őrházlak">
+            <annotation>
+               <documentation>őrházlak=100</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="park">
+            <annotation>
+               <documentation>park=101</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="parkoló">
+            <annotation>
+               <documentation>parkoló=104</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="parkja">
+            <annotation>
+               <documentation>parkja=102</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="part">
+            <annotation>
+               <documentation>part=103</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pavilon">
+            <annotation>
+               <documentation>pavilon=106</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pálya">
+            <annotation>
+               <documentation>pálya=104</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pályaudvar">
+            <annotation>
+               <documentation>pályaudvar=105</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="piac">
+            <annotation>
+               <documentation>piac=106</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pihenő">
+            <annotation>
+               <documentation>pihenő=107</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pince">
+            <annotation>
+               <documentation>pince=108</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="pincesor">
+            <annotation>
+               <documentation>pincesor=109</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="puszta">
+            <annotation>
+               <documentation>puszta=110</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rakpart">
+            <annotation>
+               <documentation>rakpart=111</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="repülőtér">
+            <annotation>
+               <documentation>repülőtér=112</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rész">
+            <annotation>
+               <documentation>rész=113</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="rét">
+            <annotation>
+               <documentation>rét=114</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sarok">
+            <annotation>
+               <documentation>sarok=115</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sánc">
+            <annotation>
+               <documentation>sánc=116</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sávház">
+            <annotation>
+               <documentation>sávház=117</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sétány">
+            <annotation>
+               <documentation>sétány=118</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sor">
+            <annotation>
+               <documentation>sor=119</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sora">
+            <annotation>
+               <documentation>sora=120</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sportpálya">
+            <annotation>
+               <documentation>sportpálya=121</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sporttelep">
+            <annotation>
+               <documentation>sporttelep=122</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="stadion">
+            <annotation>
+               <documentation>stadion=123</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="strandfürdő">
+            <annotation>
+               <documentation>strandfürdő=124</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sugárút">
+            <annotation>
+               <documentation>sugárút=125</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállás">
+            <annotation>
+               <documentation>szállás=126</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szállások">
+            <annotation>
+               <documentation>szállások=127</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szer">
+            <annotation>
+               <documentation>szer=128</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szél">
+            <annotation>
+               <documentation>szél=129</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="sziget">
+            <annotation>
+               <documentation>sziget=130</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szivattyútelep">
+            <annotation>
+               <documentation>szivattyútelep=131</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlő">
+            <annotation>
+               <documentation>szőlő=132</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlőhegy">
+            <annotation>
+               <documentation>szőlőhegy=133</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="szőlők">
+            <annotation>
+               <documentation>szőlők=134</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tag">
+            <annotation>
+               <documentation>tag=135</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanya">
+            <annotation>
+               <documentation>tanya=136</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tanyák">
+            <annotation>
+               <documentation>tanyák=137</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="telep">
+            <annotation>
+               <documentation>telep=138</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="temető">
+            <annotation>
+               <documentation>temető=139</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tere">
+            <annotation>
+               <documentation>tere=140</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tető">
+            <annotation>
+               <documentation>tető=141</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="télikikötő">
+            <annotation>
+               <documentation>télikikötő=142</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="tömb">
+            <annotation>
+               <documentation>tömb=144</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="turistaház">
+            <annotation>
+               <documentation>turistaház=145</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="udvar">
+            <annotation>
+               <documentation>udvar=146</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utak">
+            <annotation>
+               <documentation>utak=147</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="utcája">
+            <annotation>
+               <documentation>utcája=149</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="útőrház">
+            <annotation>
+               <documentation>útőrház=152</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő">
+            <annotation>
+               <documentation>üdülő=153</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-part">
+            <annotation>
+               <documentation>üdülő-part=154</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-sor">
+            <annotation>
+               <documentation>üdülő-sor=155</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="üdülő-telep">
+            <annotation>
+               <documentation>üdülő-telep=156</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadaskert">
+            <annotation>
+               <documentation>vadaskert=157</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vadászház">
+            <annotation>
+               <documentation>vadászház=158</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútállomás">
+            <annotation>
+               <documentation>vasútállomás=159</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútimegálló">
+            <annotation>
+               <documentation>vasútimegálló=160</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútiőrház">
+            <annotation>
+               <documentation>vasútiőrház=161</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vasútsor">
+            <annotation>
+               <documentation>vasútsor=162</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vágóhíd">
+            <annotation>
+               <documentation>vágóhíd=163</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vár">
+            <annotation>
+               <documentation>vár=164</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várkerület">
+            <annotation>
+               <documentation>várkerület</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="várköz">
+            <annotation>
+               <documentation>várköz=165</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="város">
+            <annotation>
+               <documentation>város=166</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vezetőút">
+            <annotation>
+               <documentation>vezetőút=167</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="villasor">
+            <annotation>
+               <documentation>villasor=168</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vitorláskikötő">
+            <annotation>
+               <documentation>vitorláskikötő</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="vízmű">
+            <annotation>
+               <documentation>vízmű=169</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="völgy">
+            <annotation>
+               <documentation>völgy=170</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zsilip">
+            <annotation>
+               <documentation>zsilip=171</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="zug">
+            <annotation>
+               <documentation>zug=172</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_K70A_0A0001C025A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="H">
+            <annotation>
+               <documentation>H=Helyesbítés</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <complexType name="Form_K70A_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány K70A részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120001"
+                  type="tns:Block_K70A_120001_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Azonosító adatok</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_K70A_120001_Type">
+      <annotation>
+         <documentation>Azonosító adatok</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120002"
+                  type="tns:FieldGroup_K70A_120002_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adatszolgáltató adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120005"
+                  type="tns:FieldGroup_K70A_120005_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Ügyintéző adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120006"
+                  type="tns:FieldGroup_K70A_120006_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adatszolgáltatás jellemzői</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70A_120002_Type">
+      <annotation>
+         <documentation>Adatszolgáltató adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószám (adoszam)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jogelőd adószáma (jogelod_adoszam)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C004A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Név (nev)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="75"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70A_120005_Type">
+      <annotation>
+         <documentation>Ügyintéző adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C024A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Név (ugyintezo_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[^0-9]*[^0-9\s][^0-9]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C023A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Telefonszám (ugyintezo_telefonszama)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="18"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70A_120006_Type">
+      <annotation>
+         <documentation>Adatszolgáltatás jellemzői</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C500A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Éve (idoszak_ev)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="4"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C025A"
+                  minOccurs="0"
+                  type="tns:Enum_K70A_0A0001C025A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jellege (adatszolg_jellege)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C027A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Helyesbítéssel érintett adatszolgáltatás vonalkódja (helyesb_é_adatszolg_vonalkódja)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Hibásnak minősített adatszolgáltatás vonalkódja (vonalkod)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C028A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Számított mező, tartalma kalkulációval (vagy XPath futtatással) kerül meghatározásra. ¦ Az érintett magánszemélyek száma (maganszemelyek_szama)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="7"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <simpleType name="Enum_K70M_0A0001C004A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="Dr.">
+            <annotation>
+               <documentation>Dr.=Doktor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Dr. Dr.">
+            <annotation>
+               <documentation>Dr. Dr.=Doktor Doktor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Id.">
+            <annotation>
+               <documentation>Id.=Idősb</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Id. Dr.">
+            <annotation>
+               <documentation>Id. Dr.=Idősb. Doktor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Ifj.">
+            <annotation>
+               <documentation>Ifj.=Ifjabb</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Ifj. Dr.">
+            <annotation>
+               <documentation>Ifj. Dr.=Ifjabb Doktor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Özv.">
+            <annotation>
+               <documentation>Özv.=Özvegy</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Özv. Dr.">
+            <annotation>
+               <documentation>Özv. Dr.=Özvegy Doktor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Prof.">
+            <annotation>
+               <documentation>Prof.=Professzor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Dr. Pr.">
+            <annotation>
+               <documentation>Dr. Pr.=Doktor Professzor</documentation>
+            </annotation>
+         </enumeration>
+         <enumeration value="Pr. Dr.">
+            <annotation>
+               <documentation>Pr. Dr.=Professzor Doktor</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_K70M_0A0001D001A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="H">
+            <annotation>
+               <documentation>H=Helyesbítés</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <simpleType name="Enum_K70M_0A0001D002A">
+      <annotation>
+         <documentation>Enum értékek </documentation>
+      </annotation>
+      <restriction base="xs:string">
+         <enumeration value="T">
+            <annotation>
+               <documentation>T</documentation>
+            </annotation>
+         </enumeration>
+      </restriction>
+   </simpleType>
+   <complexType name="Form_K70M_Type">
+      <annotation>
+         <documentation>A teljes nyomtatvány K70M részbiztonylatának szerkezetét leíró típus.</documentation>
+      </annotation>
+      <sequence>
+         <element name="Block_120001"
+                  type="tns:Block_K70M_120001_Type"
+                  minOccurs="0"
+                  meta:metaType="BlockMetaType">
+            <annotation>
+               <documentation>Magánszemélyenkénti összesítő</documentation>
+            </annotation>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="Block_K70M_120001_Type">
+      <annotation>
+         <documentation>Magánszemélyenkénti összesítő</documentation>
+      </annotation>
+      <all>
+         <element name="FieldGroup_120003"
+                  type="tns:FieldGroup_K70M_120003_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Magánszemély adatai</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120006"
+                  type="tns:FieldGroup_K70M_120006_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adatszolgáltatás jellege</documentation>
+            </annotation>
+         </element>
+         <element name="Chain_120047"
+                  type="tns:Chain_K70M_120047_Type"
+                  minOccurs="0"
+                  meta:metaType="ChainMetaType">
+            <annotation>
+               <documentation>Adatszolgáltatás</documentation>
+            </annotation>
+         </element>
+         <element name="FieldGroup_120075"
+                  type="tns:FieldGroup_K70M_120075_Type"
+                  minOccurs="0"
+                  meta:metaType="FieldGroupMetaType">
+            <annotation>
+               <documentation>Adatszolgáltató</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="Chain_K70M_120047_Type">
+      <annotation>
+         <documentation>Adatszolgáltatás</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="99">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120048"
+                           type="tns:FieldGroup_K70M_120048_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Adatszolgáltatás</documentation>
+                     </annotation>
+                  </element>
+                  <element name="Chain_120060"
+                           type="tns:Chain_K70M_120060_Type"
+                           minOccurs="0"
+                           meta:metaType="ChainMetaType">
+                     <annotation>
+                        <documentation>Értékpapírokkal kapcsolatos adatok</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+      <attribute name="sdgID" use="required" fixed="120035"/>
+   </complexType>
+   <complexType name="Chain_K70M_120060_Type">
+      <annotation>
+         <documentation>Értékpapírokkal kapcsolatos adatok</documentation>
+      </annotation>
+      <sequence>
+         <element name="Chain_elem" minOccurs="0" maxOccurs="13">
+            <annotation>
+               <documentation>Lánc ismétlődő elemei</documentation>
+            </annotation>
+            <complexType>
+               <sequence>
+                  <element name="FieldGroup_120061"
+                           type="tns:FieldGroup_K70M_120061_Type"
+                           minOccurs="1"
+                           meta:metaType="FieldGroupMetaType">
+                     <annotation>
+                        <documentation>Értékpapírokkal kapcsolatos adatok</documentation>
+                     </annotation>
+                  </element>
+               </sequence>
+            </complexType>
+         </element>
+      </sequence>
+   </complexType>
+   <complexType name="FieldGroup_K70M_120003_Type">
+      <annotation>
+         <documentation>Magánszemély adatai</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C003A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adóazonosító jele (magánszemély_adóazonosító)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="10"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C004A"
+                  minOccurs="0"
+                  type="tns:Enum_K70M_0A0001C004A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Titulusa (dr)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001C005A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Családi neve (vez_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[^0-9]*[^0-9\s][^0-9]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C006A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>utóneve (ker_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[^0-9]*[^0-9\s][^0-9]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C007A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Születési családi neve (szül_vez_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[^0-9]*[^0-9\s][^0-9]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C008A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>utóneve (szül_ker_név)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[^0-9]*[^0-9\s][^0-9]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70M_120006_Type">
+      <annotation>
+         <documentation>Adatszolgáltatás jellege</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001D001A"
+                  minOccurs="0"
+                  type="tns:Enum_K70M_0A0001D001A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jelölje "H" betűvel, ha az adatszolgáltatása adózói javításnak (helyesbítésnek) minősül! (m_helyesbites)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0A0001D002A"
+                  minOccurs="0"
+                  type="tns:Enum_K70M_0A0001D002A"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Jelölje "T" betűvel, ha a magánszeméllyel kapcsolatosan adatszolgáltatási kötelezettség nem terhelte! (törlés)</documentation>
+            </annotation>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70M_120075_Type">
+      <annotation>
+         <documentation>Adatszolgáltató</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0A0001C001A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adatszolgáltató adószáma (adószám_m)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0A0001C002A"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adatszolgáltató neve (adózó_neve)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="40"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70M_120048_Type">
+      <annotation>
+         <documentation>Adatszolgáltatás</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXC0001AA"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>- az egyedi letét őrzése megszűnt (A1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC0001BA"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>- egyedi letéti őrzésbe vett át értékpapírt a korábbi letétkezelőtől (befektetési szolgáltatótól, program szervezőjétől) (B1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC0001CA"
+                  minOccurs="0"
+                  type="xs:boolean"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>- az egyedi letéti őrzés megszűnt, de a letétkezelő külföldi befektetési szolgáltató (C1)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXC0002AA"
+                  minOccurs="0"
+                  type="xs:date"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>(A2)</documentation>
+            </annotation>
+         </element>
+         <element name="Field_0BXXXXD0004AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (A4)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXD0003AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Cégneve (A3)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXD0005AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az elismert program nyilvántartási száma (A5)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="13"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXE0007AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Adószáma (A7)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXE0006AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Cégneve (A6)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="33"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXE0008AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az új letétkezelő székhelye - országkód (A8)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="2"/>
+                  <pattern value="[A-Z0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXE0008BA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>város/település (B8)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="80"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+   <complexType name="FieldGroup_K70M_120061_Type">
+      <annotation>
+         <documentation>Értékpapírokkal kapcsolatos adatok</documentation>
+      </annotation>
+      <all>
+         <element name="Field_0BXXXXF0009AA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az értékpapír azonosító adatai ¦ az értékpapír kódja (ISIN vagy ennek megfelelő azonosító) (A9)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="12"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXF0009BA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az értékpapír azonosító adatai ¦ megnevezése,fajtája (B9)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="4"/>
+                  <pattern value="[\P{C}]*[^\s][\P{C}]*"/>
+               </restriction>
+            </simpleType>
+         </element>
+         <element name="Field_0BXXXXF0009CA"
+                  minOccurs="0"
+                  meta:metaType="FieldMetaType">
+            <annotation>
+               <documentation>Az értékpapír azonosító adatai ¦ szokásos piaci értéke (Ft) (C9)</documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <minLength value="1"/>
+                  <maxLength value="11"/>
+                  <pattern value="[0-9]+"/>
+               </restriction>
+            </simpleType>
+         </element>
+      </all>
+   </complexType>
+</schema>
